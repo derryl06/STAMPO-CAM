@@ -1,0 +1,6 @@
+{
+  "name": "stempels",
+  "description": "Analog memory & vintage camera scrapbook app with tactile postage stamps and paper collage.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

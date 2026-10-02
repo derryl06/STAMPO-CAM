@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1A1A1A;
+    background-color: #EFECE6;
+  }
+}
+
+.font-mono-tactile {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Subtle, smooth natural paper surface */
+.paper-sheet-bg {
+  background-color: #F8F6F0;
+}
+
+/* 3D tilt perspective */
+.perspective-container {
+  perspective: 1200px;
+}
+
+/* ------------------------------------------------------------- */
+/* TEXTURE OPTIONS FOR SCRAPBOOK CARD & EXPORT                    */
+/* ------------------------------------------------------------- */
+
+/* 1. Linen Paper Texture (Default - matching user's uploaded sample) */
+.texture-linen {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='linen'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.62' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.12  0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0.45 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23linen)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
+/* 2. 35mm Analog Film Grain */
+.texture-film {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.52 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)'/%3E%3C/svg%3E");
+  background-size: 110px 110px;
+}
+
+/* 3. Woven Artist Canvas */
+.texture-canvas {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v12H0zm12 12h12v12H12z' fill='rgba(0,0,0,0.04)'/%3E%3Cpath d='M12 0h12v12H12zm-12 12h12v12H0z' fill='rgba(255,255,255,0.035)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  background-size: 8px 8px, 120px 120px;
+}
+
+/* 4. Pressed Cotton Parchment */
+.texture-parchment {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='fiber'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.045' numOctaves='4' result='noise'/%3E%3CfeDiffuseLighting in='noise' lighting-color='%23FAF6ED' surfaceScale='1.8' result='light'%3E%3CfeDistantLight azimuth='45' elevation='55'/%3E%3C/feDiffuseLighting%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.4'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23fiber)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* 5. Japanese Washi Rice Paper with organic mulberry fibers */
+.texture-washi {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='washi'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.035 0.28' numOctaves='3' result='fibers'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.15  0 0 0 0 0.12  0 0 0 0 0.09  0 0 0 0.42 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23washi)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* 6. Recycled Kraft Cardboard Paper */
+.texture-kraft {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='kraft'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' result='grain'/%3E%3CfeColorMatrix in='grain' type='matrix' values='0 0 0 0 0.28  0 0 0 0 0.2  0 0 0 0 0.12  0 0 0 0.58 0' result='kraftGrain'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23kraft)'/%3E%3C/svg%3E");
+  background-size: 130px 130px;
+}
+
+/* 7. Watercolor Cold-Press Dimpled Paper */
+.texture-watercolor {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='wc'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.04' numOctaves='5' result='bumps'/%3E%3CfeDiffuseLighting in='bumps' surfaceScale='2.2' lighting-color='%23FAF7F0' result='lit'%3E%3CfeDistantLight azimuth='60' elevation='40'/%3E%3C/feDiffuseLighting%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.5'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23wc)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* 8. Vintage Dot Halftone Newsprint */
+.texture-newsprint {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='1.2' fill='rgba(45,35,25,0.08)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='np'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.3 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23np)'/%3E%3C/svg%3E");
+  background-size: 10px 10px, 100px 100px;
+}
+
+/* 9. Aged Ephemera: Weathered Vintage Stained Paper with Subtle Creases (Gambar 1) */
+.texture-aged-crease {
+  background-image: 
+    linear-gradient(to bottom, transparent calc(50% - 1.5px), rgba(90, 68, 48, 0.22) calc(50% - 0.5px), rgba(245, 240, 230, 0.4) 50%, rgba(90, 68, 48, 0.25) calc(50% + 0.5px), transparent calc(50% + 2px)),
+    radial-gradient(ellipse 55% 45% at 94% 24%, rgba(160, 118, 70, 0.28) 0%, rgba(185, 142, 95, 0.12) 48%, transparent 75%),
+    radial-gradient(ellipse 40% 35% at 6% 85%, rgba(150, 105, 62, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(255, 252, 245, 0.2) 0%, transparent 80%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='aged'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.038' numOctaves='5' result='stain'/%3E%3CfeColorMatrix in='stain' type='matrix' values='0 0 0 0 0.22  0 0 0 0 0.16  0 0 0 0 0.10  0 0 0 0.46 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23aged)'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 220px 220px;
+}
+
+/* 10. Crumpled Kraft Paper: Deep Faceted Origami Wrinkles & Crinkles (Gambar 2) */
+.texture-crumpled {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='crumple'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.032' numOctaves='5' result='folds'/%3E%3CfeDiffuseLighting in='folds' surfaceScale='3.4' lighting-color='%23FFFFFF' result='light'%3E%3CfeDistantLight azimuth='125' elevation='38'/%3E%3C/feDiffuseLighting%3E%3CfeComponentTransfer in='light' result='contrast'%3E%3CfeFuncR type='linear' slope='1.35' intercept='-0.18'/%3E%3CfeFuncG type='linear' slope='1.35' intercept='-0.18'/%3E%3CfeFuncB type='linear' slope='1.35' intercept='-0.18'/%3E%3C/feComponentTransfer%3E%3CfeColorMatrix in='contrast' type='matrix' values='0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 0.72 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23crumple)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
